@@ -1,6 +1,6 @@
 # sing-box-installer
 
-https://github.com/RayWangQvQ/sing-box-installer
+修改自https://github.com/RayWangQvQ/sing-box-installer
 
 基于`sing-box`和`docker`容器化搭建`vmess`、`naiveproxy`和`hysteria2`的保姆级教程。
 
@@ -50,7 +50,7 @@ sudo -i
 mkdir -p ./sing-box && cd ./sing-box
 
 # install
-bash <(curl -sSL https://raw.githubusercontent.com/RayWangQvQ/sing-box-installer/main/install.sh)
+bash <(curl -sSL https://raw.githubusercontent.com/twamix/sing-box-installer/main/install.sh)
 ```
 
 ## 1. 大概介绍下
@@ -123,17 +123,8 @@ sudo -i
 mkdir -p ./sing-box && cd ./sing-box
 
 # install
-bash <(curl -sSL https://raw.githubusercontent.com/RayWangQvQ/sing-box-installer/main/install.sh)
+bash <(curl -sSL https://raw.githubusercontent.com/twamix/sing-box-installer/main/install.sh)
 ```
-
-运行后会让输入参数：
-
-- 域名：需要自己DNS解析好到自己的服务器ip
-- 邮箱：用来申请证书的（会自动申请并更新）
-- proxy uuid: 自己设置，可以随便搜个网站生成
-- proxy用户名：自己设置
-- proxy密码：自己设置
-
 ### 2.3. 手动部署
 
 [教程](DIY.md)
