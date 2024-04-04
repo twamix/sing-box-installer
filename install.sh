@@ -516,8 +516,9 @@ check_result() {
         echo "请使用客户端尝试连接你的节点进行测试"
         echo "如果异常，请运行'docker logs -f sing-box'来追踪容器运行日志, 随后可以点击 Ctrl+c 退出日志追踪"
         echo ""
+        echo "vmess节点如下："
         echo -n "vmess://"
-        echo -n '{"add":"$domain","aid":"0","host":"$domain","id":"$proxy_uuid","net":"ws","path":"/download","port":"$port_vmess","ps":"vmess","scy":"auto","sni":"$domain","tls":"","type":"","v":"2"}' | base64
+        echo -n "{\"add\":\"$domain\",\"aid\":\"0\",\"host\":\"$domain\",\"id\":\"$proxy_uuid\",\"net\":\"ws\",\"path\":\"/download\",\"port\":\"$port_vmess\",\"ps\":\"vmess\",\"scy\":\"auto\",\"sni\":\"$domain\",\"tls\":\"\",\"type\":\"\",\"v\":\"2\"}" | base64 -w 0
         echo ""
         echo "naive节点如下："
         echo "naive+https://$proxy_name:$proxy_pwd@$domain:$port_naive#naive"
