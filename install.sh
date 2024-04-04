@@ -520,6 +520,7 @@ check_result() {
         echo -n "vmess://"
         echo -n "{\"add\":\"$domain\",\"aid\":\"0\",\"host\":\"$domain\",\"id\":\"$proxy_uuid\",\"net\":\"ws\",\"path\":\"/download\",\"port\":\"$port_vmess\",\"ps\":\"vmess\",\"scy\":\"auto\",\"sni\":\"$domain\",\"tls\":\"\",\"type\":\"\",\"v\":\"2\"}" | base64 -w 0
         echo ""
+        echo ""
         echo "naive节点如下："
         echo "naive+https://$proxy_name:$proxy_pwd@$domain:$port_naive#naive"
         echo ""
