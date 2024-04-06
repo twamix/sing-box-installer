@@ -2,7 +2,7 @@
 set -e
 
 configFilePath="/data/config.json"
-logFilePath="/data/sing-box.json"
+logFilePath="/data/sing-box.log"
 
 echo "entry"
 sing-box version
@@ -14,5 +14,5 @@ sing-box format -c /data/config.json -w
 cat $configFilePath
 
 echo -e "\nstarting"
-sing-box run -c $configFilePath
-tail -f $logFilePath
+touch $logFilePath
+sing-box run -c $configFilePath 2>&1 | tee -a $logFilePath
