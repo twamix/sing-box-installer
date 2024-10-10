@@ -232,8 +232,37 @@ bash <(curl -sSL https://raw.githubusercontent.com/twamix/sing-box-installer/mai
 
 同上，跟windows下的Nekoray一样。
 
-## 4. FAQ
+## 4. 更新docker中的singbox服务端
+### 4.1
+找到容器id
+```
+docker ps
+```
+停止容器并且删除容器
+```
+docker stop ID
+docker rm ID
+```
+删除容器images
+```
+docker images
+docker rmi ID
+```
+进入singbox文件夹，重新拉去镜像
+```
+docker-compose up -d
+```
+### 4.2 检查更新
+```
+# 进入容器
+docker exec -it sing-box bash
+```
+```
+sing-box version
+```
 
-### 4.1. hy的端口hop
+## 5. FAQ
+
+### 5.1. hy的端口hop
 
 sing-box暂不支持，目前只能多加几个hy节点，然后在客户端做负载均衡。
