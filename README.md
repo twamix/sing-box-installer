@@ -234,27 +234,24 @@ bash <(curl -sSL https://raw.githubusercontent.com/twamix/sing-box-installer/mai
 
 ## 4. 更新docker中的singbox服务端
 ### 4.1
-找到容器id
+进入singbox文件夹
 ```
-docker ps
+cd /root/sing-box
 ```
-停止容器并且删除容器
 ```
-docker stop ID
-docker rm ID
+docker-compose stop
 ```
-删除容器images
 ```
-docker images
-docker rmi ID
+docker-compose down
 ```
-进入singbox文件夹，重新拉去镜像
+```
+docker-compose pull
+```
 ```
 docker-compose up -d
 ```
 ### 4.2 检查更新
 ```
-# 进入容器
 docker exec -it sing-box bash
 ```
 ```
